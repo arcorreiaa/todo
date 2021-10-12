@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-type  ContainerProps = {
+type ContainerProps = {
     done: boolean;
 }
 
@@ -8,20 +8,27 @@ export const Container = styled.div(({ done }: ContainerProps)=>(
     `
     display: flex;
     background-color: #20212C;
-    padding: 10px;
+    padding:10px;
     border-radius: 10px;
     margin-bottom: 10px;
-    align-itens: center;
-
+    align-items: center;
     input {
         width: 25px;
-        height: 20px;
+        height: 25px;
         margin-right: 5px;
     }
-
     label {
         color: #CCC;
-        text-decoration: ${done ? 'line-through' : 'initial'};
+        text-decoration: ${done? 'line-through': 'initial'};
+    }
+    .delete {
+        justify-content: flex-end;
+        display: flex;
+        padding-left: 20px;
+        cursor: pointer;
+    }
+    .delete:hover {
+        text-decoration: underline;
     }
 `
 ));
